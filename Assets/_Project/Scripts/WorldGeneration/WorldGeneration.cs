@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -18,9 +19,12 @@ namespace _Project.Scripts.WorldGeneration
 
         [SerializeField] private List<GameObject> chunkPrefabs;
         [SerializeField] private Transform cameraTransform;
-        
-        
-        
+
+        private void Awake()
+        {
+            ResetWorld();
+        }
+
         private void Start()
         {
             if (chunkPrefabs.Count == 0)
