@@ -4,7 +4,7 @@ namespace _Project.Scripts
 {
     public class Chunk : MonoBehaviour
     {
-        public float chunkLength = 20;
+        public int chunkLength = 20;
 
         public Chunk Show()
         {
